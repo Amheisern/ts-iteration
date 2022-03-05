@@ -29,8 +29,9 @@
 
 function yelling(words: string[]): string[] {
   // Replace the code below with your own code
-  return []
+  return words.map(word => word.toUpperCase())
 }
+console.log(yelling)
 
 /**
  *
@@ -109,7 +110,10 @@ type Movie = {
   year: number
   score: number
 }
-function bestMoviesOfTheYear(movieObjectArray: Movie[], year: number): string[] {
+function bestMoviesOfTheYear(
+  movieObjectArray: Movie[],
+  year: number
+): string[] {
   // Replace the code below with your own code
   return []
 }
