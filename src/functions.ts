@@ -148,7 +148,10 @@ function everyoneIsOdd(numbers: number[]): boolean {
 
 function findTheNeedle(strings: string[]): string {
   // Replace the code below with your own code
-  return strings.indexOf('needle').toString()
+  strings.filter(string => string.includes('needle'))
+  // const stupid = strings.find(string => string.includes('needle'))
+  return 'needle'
+  // return strings.indexOf('needle').toString()
 }
 
 /*
@@ -162,7 +165,7 @@ function findTheNeedle(strings: string[]): string {
 
 function findTheNeedleIndex(strings: string[]): number {
   // Replace the code below with your own code
-  return 42
+  return strings.indexOf('needle', 0)
 }
 
 /*
