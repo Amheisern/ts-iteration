@@ -1,24 +1,16 @@
 /*
-
    Welcome to JS Iteration
-
    Down below you will find instructions for code to write.
-
    As you write and save your code, you can look in your terminal where you
    ran `yarn test` to see if your code is working. The tests continuously check
    your work each time you save. If a test is failing either you have not yet
    defined that function or you have not defined it correctly.
-
    Each section describes WHAT the function is to do. Uncomment the function
    declaration code and fill in the logic to make the function do the behavior
    that is requested.
-
    Once you finish a function and have it correct, the test will tell you if/how
    the next function is working.
-
 */
-
-import { only } from 'ava'
 
 /**
  * 1) Define a function named `yelling` that takes an array of
@@ -50,6 +42,7 @@ function doubleTrouble(numbers: number[]): number[] {
   return numbers.map(n => n * 2)
 }
 console.log(doubleTrouble)
+
 /*
  * 3) Define a function named `stringyIndexes` that takes an array of
  * strings as an argument and returns a new array with each string
@@ -89,9 +82,8 @@ console.log(onlyTheEvenSurvive)
 
 function onlyTheEvenIndexedSurvive(numbers: number[]): number[] {
   // Replace the code below with your own code
-  return numbers.filter((number, index) => number % 2 === 0)
+  return numbers.filter((number, index) => index % 2 === 0)
 }
-console.log(onlyTheEvenSurvive)
 
 /*
  * 6)  Define a function bestMoviesOfTheYear that accepts an array of
@@ -148,10 +140,8 @@ function everyoneIsOdd(numbers: number[]): boolean {
 
 function findTheNeedle(strings: string[]): string {
   // Replace the code below with your own code
-  strings.filter(string => string.includes('needle'))
-  // const stupid = strings.find(string => string.includes('needle'))
-  return 'needle'
-  // return strings.indexOf('needle').toString()
+  strings.find(string => string.includes('needle'))
+  return 'there was a needle at'
 }
 
 /*
@@ -165,7 +155,7 @@ function findTheNeedle(strings: string[]): string {
 
 function findTheNeedleIndex(strings: string[]): number {
   // Replace the code below with your own code
-  return strings.indexOf('needle', 0)
+  return strings.findIndex(string => string.includes('needle'))
 }
 
 /*
@@ -179,7 +169,7 @@ function findTheNeedleIndex(strings: string[]): number {
 
 function someoneToLove(strings: string[]): boolean {
   // Replace the code below with your own code
-  return false
+  return strings.some(string => string.length === 4)
 }
 
 /*
