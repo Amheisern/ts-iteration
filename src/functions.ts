@@ -45,9 +45,9 @@ console.log(yelling)
 
 function doubleTrouble(numbers: number[]): number[] {
   // Replace the code below with your own code
-  return []
+  return numbers.map(n => n * n)
 }
-
+console.log(doubleTrouble)
 /*
  * 3) Define a function named `stringyIndexes` that takes an array of
  * strings as an argument and returns a new array with each string
