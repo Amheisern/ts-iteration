@@ -18,6 +18,8 @@
 
 */
 
+import { only } from 'ava'
+
 /**
  * 1) Define a function named `yelling` that takes an array of
  * strings as an argument and returns a new array with all
@@ -45,7 +47,7 @@ console.log(yelling)
 
 function doubleTrouble(numbers: number[]): number[] {
   // Replace the code below with your own code
-  return numbers.map(n => n * n)
+  return numbers.map(n => n * 2)
 }
 console.log(doubleTrouble)
 /*
@@ -59,8 +61,9 @@ console.log(doubleTrouble)
 
 function stringyIndexes(strings: string[]): string[] {
   // Replace the code below with your own code
-  return []
+  return strings.map((current, index) => current + ' is at index ' + index)
 }
+console.log(stringyIndexes)
 
 /*
  * 4) Define a function named onlyTheEvenSurvive that accepts an array of
@@ -72,8 +75,9 @@ function stringyIndexes(strings: string[]): string[] {
 
 function onlyTheEvenSurvive(numbers: number[]): number[] {
   // Replace the code below with your own code
-  return []
+  return numbers.filter(number => number % 2 === 0)
 }
+console.log(onlyTheEvenSurvive)
 
 /*
  * 5) Define a function onlyTheEvenIndexedSurvive that accepts an array of
@@ -85,8 +89,9 @@ function onlyTheEvenSurvive(numbers: number[]): number[] {
 
 function onlyTheEvenIndexedSurvive(numbers: number[]): number[] {
   // Replace the code below with your own code
-  return []
+  return numbers.filter((number, index) => number % 2 === 0)
 }
+console.log(onlyTheEvenSurvive)
 
 /*
  * 6)  Define a function bestMoviesOfTheYear that accepts an array of
