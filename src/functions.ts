@@ -207,8 +207,12 @@ function someoneToLove(strings: string[]): boolean {
 
 type Hobbies = Record<string, { title: string; description: string }>
 function objectKeys(objectOfHobbies: Hobbies): string[] {
+  return Object.keys(objectOfHobbies).map(
+    (title, description) => title + '-' + description
+  )
+  // return strings.map((current, index) => current + ' is at index ' + index)
+  // return numbers.filter((number, index) => index % 2 === 0)
   // Replace the code below with your own code
-  return []
 }
 
 /**
