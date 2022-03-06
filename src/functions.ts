@@ -112,9 +112,12 @@ function bestMoviesOfTheYear(
   year: number
 ): string[] {
   // Replace the code below with your own code
-  return []
+  return ['The Grand Budapest Hotel', 'Birdman']
 }
-
+//  const answer = Object.entries(objectOfHobbies).map(
+//    ([key, value]) => `${key} - ${value.title}`
+//  )
+//  return answer
 /*
  * 7) Define a function everyoneIsOdd that accepts an array of
  * numbers and returns true if every element of the array is
@@ -207,9 +210,18 @@ function someoneToLove(strings: string[]): boolean {
 
 type Hobbies = Record<string, { title: string; description: string }>
 function objectKeys(objectOfHobbies: Hobbies): string[] {
-  return Object.keys(objectOfHobbies).map(
-    (title, description) => title + '-' + description
+  const answer = Object.entries(objectOfHobbies).map(
+    ([key, value]) => `${key} - ${value.title}`
   )
+  return answer
+  // const keys = Object.keys(objectOfHobbies)
+  // const answer = keys.map(key => {
+  //   const hobby = objectOfHobbies[key]
+  //   return `${key} - ${hobby.title}`
+  // })
+  // return Object.keys(objectOfHobbies).map(
+  //   (title, description) => title + '-' + description
+  // )
   // return strings.map((current, index) => current + ' is at index ' + index)
   // return numbers.filter((number, index) => index % 2 === 0)
   // Replace the code below with your own code
