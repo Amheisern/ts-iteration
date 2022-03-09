@@ -111,8 +111,10 @@ function bestMoviesOfTheYear(
   movieObjectArray: Movie[],
   year: number
 ): string[] {
+  return movieObjectArray
+    .filter(movie => movie.score > 90 && movie.year === year)
+    .map(movie => movie.name)
   // Replace the code below with your own code
-  return ['The Grand Budapest Hotel', 'Birdman']
 }
 //  const answer = Object.entries(objectOfHobbies).map(
 //    ([key, value]) => `${key} - ${value.title}`
@@ -143,8 +145,8 @@ function everyoneIsOdd(numbers: number[]): boolean {
 
 function findTheNeedle(strings: string[]): string {
   // Replace the code below with your own code
-  strings.find(string => string.includes('needle'))
-  return 'there was a needle at'
+  return strings.find(string => string.includes('needle')) || ''
+  // return 'there was a needle at'
 }
 
 /*
@@ -193,6 +195,7 @@ function someoneToLove(strings: string[]): boolean {
  *        "pandas": {
  *          "title": "Panda Bears",
  *          "description": "Pandas are bears native to south-central China, and are objectively the cutest animals on earth.",
+ * "populations": 500
  *        },
  *        "miniatures": {
  *          "title": "Miniature Painting",
@@ -210,8 +213,9 @@ function someoneToLove(strings: string[]): boolean {
 
 type Hobbies = Record<string, { title: string; description: string }>
 function objectKeys(objectOfHobbies: Hobbies): string[] {
+  console.log(Object.entries(objectOfHobbies))
   const answer = Object.entries(objectOfHobbies).map(
-    ([key, value]) => `${key} - ${value.title}`
+    ([taco, tuesday]) => `${taco} - ${tuesday.title}`
   )
   return answer
   // const keys = Object.keys(objectOfHobbies)
